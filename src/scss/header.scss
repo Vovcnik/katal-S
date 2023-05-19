@@ -1,5 +1,183 @@
 //====================================================================================================
 
+.header {
+	// .header__container
+
+	&__container {
+	}
+}
+
+.top {
+	// .top_header
+
+	&_header {
+	}
+}
+.star-yndex {
+	display: flex;
+	align-items: center;
+	._icon-I {
+		color: #e30e0e;
+		font-size: 20px;
+		position: absolute;
+		left: 12px;
+		top: 11px;
+	}
+	._icon-start {
+		font-size: 30px;
+		position: absolute;
+		left: 43%;
+		top: 8px;
+	}
+}
+.header-top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding-top: rem(22);
+	@media (max-width: $mobileSmall) {
+		padding-top: rem(0);
+	}
+	// .header-top__logo
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 0 1 650px;
+		position: relative;
+		@media (max-width: 520px) {
+			flex: 1 1 auto;
+			justify-content: end;
+		}
+		.reiting {
+			font-size: rem(18);
+			line-height: math.div(22, 18);
+			font-weight: 600;
+		}
+	}
+	.yandex-reiting {
+		background: url("@img/yandex-fon.png") 0 0 no-repeat;
+		background-size: cover;
+		width: 56px;
+		height: 88px;
+		position: absolute;
+		top: -22px;
+		left: 37%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-top: rem(11);
+		@media (max-width: $tablet) {
+			left: 65%;
+		}
+		@media (max-width: 520px) {
+			left: -15px;
+		}
+		@media (max-width: $mobileSmall) {
+			top: 0px;
+			a img {
+				max-width: 125px;
+				width: 100%;
+			}
+		}
+	}
+	// .header-top__adress
+
+	&__adress {
+		text-align: left;
+		color: #4d4d4d;
+		position: relative;
+		@media (max-width: $tablet) {
+			display: none;
+		}
+		._icon-adress:before {
+			position: absolute;
+			color: #fd7900;
+			left: -70px;
+			top: 0;
+			font-size: 30px;
+			background: #ffeedf;
+			border-radius: 37px;
+			padding: 10px;
+			font-weight: 500;
+		}
+		p {
+			padding-bottom: 5px;
+		}
+	}
+	.map {
+		color: #fd7900;
+		text-decoration: underline;
+		font-size: 16px;
+	}
+	// .header-top__whatsapp
+
+	&__whatsapp {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex: 0 1 450px;
+		@media (max-width: 1200px) {
+			flex: 0 1 auto;
+			align-items: flex-start;
+		}
+
+		._icon-watchap::before {
+			font-size: 30px;
+			background: #00bb25;
+			border-radius: 37px;
+			padding: 10px;
+			color: #fff;
+			@media (max-width: $mobile) {
+				border-radius: 37px;
+				padding: 10px;
+				font-size: 30px;
+				background: none;
+				color: #00bb25;
+			}
+			@media (max-width: $mobileSmall) {
+				display: none;
+			}
+		}
+		.WhatsApp {
+			font-weight: 700;
+			font-size: rem(16);
+			line-height: math.div(24, 16);
+		}
+	}
+
+	// .header-top__question
+
+	&__question {
+		text-align: right;
+		@media (max-width: 1200px) {
+			display: none;
+		}
+		p {
+			padding-bottom: 5px;
+		}
+	}
+
+	// .header-top__telefon
+
+	&__telefon {
+		text-align: right;
+	}
+}
+.top-tel {
+	font-size: rem(24);
+	font-weight: 700;
+	line-height: math.div(24, 29);
+	white-space: nowrap;
+	padding: 0px 0px 0px 20px;
+	@media (max-width: $tablet) {
+		font-size: rem(20);
+	}
+}
+
 //====================================================================================================
 
 //Burger
