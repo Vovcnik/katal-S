@@ -34,10 +34,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-
 	padding-top: rem(22);
-	@media (max-width: $mobileSmall) {
-		padding-top: rem(0);
+	@media (max-width: $mobile) {
+		padding-top: rem(5);
 	}
 	// .header-top__logo
 
@@ -49,7 +48,7 @@
 		position: relative;
 		@media (max-width: 520px) {
 			flex: 1 1 auto;
-			justify-content: end;
+			justify-content: center;
 		}
 		.reiting {
 			font-size: rem(18);
@@ -71,13 +70,13 @@
 		align-items: center;
 		padding-top: rem(11);
 		@media (max-width: $tablet) {
-			left: 65%;
+			left: 60%;
 		}
 		@media (max-width: 520px) {
 			left: -15px;
 		}
-		@media (max-width: $mobileSmall) {
-			top: 0px;
+		@media (max-width: $mobile) {
+			top: -5px;
 			a img {
 				max-width: 125px;
 				width: 100%;
@@ -126,11 +125,14 @@
 		}
 
 		._icon-watchap::before {
-			font-size: 30px;
+			font-size: 20px;
 			background: #00bb25;
 			border-radius: 37px;
-			padding: 10px;
+			padding: 7px;
 			color: #fff;
+			position: absolute;
+			top: -5px;
+			left: -45px;
 			@media (max-width: $mobile) {
 				border-radius: 37px;
 				padding: 10px;
@@ -165,6 +167,7 @@
 
 	&__telefon {
 		text-align: right;
+		position: relative;
 	}
 }
 .top-tel {
@@ -172,16 +175,94 @@
 	font-weight: 700;
 	line-height: math.div(24, 29);
 	white-space: nowrap;
-	padding: 0px 0px 0px 20px;
+
 	@media (max-width: $tablet) {
 		font-size: rem(20);
+		padding: 0px 0px 0px 10px;
 	}
+}
+
+.header {
+	position: relative;
+	// .header__menu
+
+	&__menu {
+	}
+}
+.menu {
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+		margin: 28px 0px 0px 0px;
+	}
+
+	// .menu__list
+
+	&__list {
+		background: #ffffff;
+		border: 2px solid #f0f0f0;
+		border-radius: 25px;
+		display: flex;
+
+		justify-content: space-between;
+		padding: 0px 60px 0px 60px;
+		@media (max-width: $mobile) {
+			right: -200%;
+			position: absolute;
+			padding: 0px;
+
+			li {
+				border-bottom: 1px solid #4d4d4d;
+				width: 100%;
+				text-align: center;
+				&:last-child {
+					border: none;
+				}
+			}
+		}
+		.menu-open & {
+			right: 10px;
+			width: 96%;
+			transition: all 0.6s ease 0s;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		display: inline-block;
+		padding: 16px 5px 16px 5px;
+		color: #4d4d4d;
+		font-size: 18px;
+		font-weight: 600;
+		line-height: math.div(27, 18);
+		white-space: nowrap;
+		@media (max-width: $tablet) {
+			font-size: 16px;
+		}
+		@media (max-width: $mobile) {
+			display: block;
+		}
+		&:hover {
+			color: #fd7900;
+			transition: all 0.3s ease 0s;
+		}
+	}
+}
+.icon-menu {
 }
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -190,6 +271,8 @@
 		width: rem(30);
 		height: rem(18);
 		z-index: 5;
+		right: -92%;
+		top: 0;
 		@media (any-hover: none) {
 			cursor: default;
 		}
@@ -231,4 +314,3 @@
 		}
 	}
 }
-*/
