@@ -286,22 +286,11 @@
 		}
 		@media (max-width: $mobile) {
 			display: block;
-<<<<<<< HEAD
 			font-size: 18px;
 			&:hover {
 				color: #f5f2f0;
 				transition: all 0.3s ease 0s;
 			}
-=======
-			&:hover {
-				color:#f0f0f0;
-				
-			}
-		}
-		&:hover {
-			color: #fd7900;
-			transition: all 0.3s ease 0s;
->>>>>>> 296aba46d806c081e0720d36089e79a31f0a5389
 		}
 		
 	}
