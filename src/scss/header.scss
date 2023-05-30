@@ -230,12 +230,13 @@
 		display: flex;
 
 		justify-content: space-between;
-		padding: 0px 60px 0px 60px;
+		@include adaptiveValue("padding-left", 60, 0);
+		@include adaptiveValue("padding-right", 60, 0);
 		@media (max-width: $mobile) {
-			right: -200%;
+			right: -300%;
 			position: absolute;
 			padding: 0px;
-
+			overflow: hidden;
 			li {
 				border-bottom: 1px solid #4d4d4d;
 
@@ -259,6 +260,7 @@
 		.menu-open & {
 			right: 10px;
 			width: 96%;
+			overflow: scroll;
 			transition: all 0.6s ease 0s;
 			flex-direction: column;
 			align-items: center;
@@ -278,12 +280,16 @@
 		@media (max-width: $tablet) {
 			font-size: 16px;
 		}
+		&:hover {
+			color: #e06614;
+		}
 		@media (max-width: $mobile) {
 			display: block;
-		}
-		&:hover {
-			color: #f5f2f0;
-			transition: all 0.3s ease 0s;
+			font-size: 18px;
+			&:hover {
+				color: #f5f2f0;
+				transition: all 0.3s ease 0s;
+			}
 		}
 	}
 }
@@ -303,7 +309,7 @@
 		height: rem(18);
 		z-index: 5;
 		right: -92%;
-		top: 0;
+		top: 7px;
 		@media (any-hover: none) {
 			cursor: default;
 		}
