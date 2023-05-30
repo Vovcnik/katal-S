@@ -245,6 +245,7 @@
 					background-color: #fd7900;
 					border: none;
 				}
+				
 				&:last-child {
 					border: none;
 					border-bottom-left-radius: 22px;
@@ -280,11 +281,16 @@
 		}
 		@media (max-width: $mobile) {
 			display: block;
+			&:hover {
+				color:#f0f0f0;
+				
+			}
 		}
 		&:hover {
-			color: #f5f2f0;
+			color: #fd7900;
 			transition: all 0.3s ease 0s;
 		}
+		
 	}
 }
 .icon-menu {
