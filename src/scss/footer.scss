@@ -24,10 +24,10 @@
         flex: 0 1 490px;
         background: #fafafa;
         border-radius: 10px;
-        @media (min-width:$mobile){
-               margin: 0px 10px 0px 0px;
+        @media (min-width: $mobile) {
+            margin: 0px 10px 0px 0px;
         }
-       
+
         @media (max-width: $mobile) {
             flex: 0 1 100%;
             display: flex;
@@ -46,6 +46,9 @@
     line-height: math.div(24, 16);
     @media (max-width: 820px) {
         padding: 10px;
+    }
+    @media (max-width: 520px) {
+        font-size: 18px;
     }
 }
 
@@ -82,8 +85,8 @@
 .footer-menu {
     flex: 0 1 620px;
     margin: 40px 0px 0px 0px;
-    @media (max-width:$mobile){
-           flex: 0 1 100%;
+    @media (max-width: $mobile) {
+        flex: 0 1 100%;
     }
 
     // .footer-menu__body
@@ -110,9 +113,15 @@
         @media (max-width: $mobile) {
             flex-wrap: wrap;
         }
-        @media (max-width:550px){
-      display: none;
-}
+        @media (max-width: 550px) {
+            display: none;
+        }
+        li {
+            margin: 0px 10px 0px 0px;
+        }
+        li:last-child {
+            margin: 0;
+        }
     }
 
     // .footer-menu__link
@@ -121,8 +130,14 @@
         font-weight: 700;
         line-height: math.div(21, 14);
         color: #fafafa;
-        margin: 0px 10px 0px 0px;
+
         white-space: nowrap;
+        @media (min-width: $mobile) {
+            &:hover {
+                color: #fd7900;
+                transition: all 0.3s ease 0s;
+            }
+        }
     }
 
     // .footer-menu__mobile
@@ -130,14 +145,14 @@
     &__mobile {
         text-align: right;
         font-weight: 700;
-        font-size: 35px;
+        font-size: 24px;
         color: #fafafa;
         line-height: math.div(52, 35);
         flex: 0 1 310px;
         @media (max-width: $mobile) {
-            font-size: 25px;
-             text-align: center;
-              flex: 0 1 100%;
+            font-size: 18px;
+            text-align: center;
+            flex: 0 1 100%;
         }
     }
 }
@@ -155,7 +170,6 @@
 
 .button-tel {
     display: inline-block;
-   
 }
 
 //====================================================================================================
