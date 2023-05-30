@@ -15,12 +15,26 @@
     justify-content: space-between;
     align-items: start;
     padding: 40px 0px 40px 0;
+    @media (max-width: $mobile) {
+        flex-wrap: wrap;
+    }
     // .footer-body__company
 
     &__company {
         flex: 0 1 490px;
         background: #fafafa;
         border-radius: 10px;
+        @media (min-width:$mobile){
+               margin: 0px 10px 0px 0px;
+        }
+       
+        @media (max-width: $mobile) {
+            flex: 0 1 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
     }
 }
 
@@ -30,6 +44,9 @@
     font-size: 16px;
     color: #353535;
     line-height: math.div(24, 16);
+    @media (max-width: 820px) {
+        padding: 10px;
+    }
 }
 
 .company-footer {
@@ -65,20 +82,20 @@
 .footer-menu {
     flex: 0 1 620px;
     margin: 40px 0px 0px 0px;
- display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    @media (max-width:$mobile){
+           flex: 0 1 100%;
+    }
+
     // .footer-menu__body
 
     &__body {
-       
         position: relative;
-        &::before{
-            content:'';
+        &::before {
+            content: "";
             position: absolute;
             width: 100%;
             height: 1px;
-            background-color:#f7f1f1;
+            background-color: #f7f1f1;
             bottom: -10px;
             left: 0;
         }
@@ -90,6 +107,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
+        @media (max-width:550px){
+      display: none;
+}
     }
 
     // .footer-menu__link
@@ -98,6 +121,8 @@
         font-weight: 700;
         line-height: math.div(21, 14);
         color: #fafafa;
+        margin: 0px 10px 0px 0px;
+        white-space: nowrap;
     }
 
     // .footer-menu__mobile
@@ -108,12 +133,29 @@
         font-size: 35px;
         color: #fafafa;
         line-height: math.div(52, 35);
-        max-width: 310px;
+        flex: 0 1 310px;
+        @media (max-width: $mobile) {
+            font-size: 25px;
+             text-align: center;
+              flex: 0 1 100%;
+        }
+    }
+}
+
+.footer-menu__mobile-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: end;
+    padding-top: rem(20);
+    @media (max-width: $mobile) {
+        justify-content: center;
     }
 }
 
 .button-tel {
     display: inline-block;
+   
 }
 
 //====================================================================================================
